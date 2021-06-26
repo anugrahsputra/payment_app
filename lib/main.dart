@@ -15,7 +15,7 @@ class _PaymentAppState extends State<PaymentApp> {
 
   @override
   Widget build(BuildContext context) {
-    Widget option(int index) {
+    Widget option(int index, String title, String subtitle, String pricing) {
       return GestureDetector(
         onTap: () {
           setState(() {
@@ -47,7 +47,14 @@ class _PaymentAppState extends State<PaymentApp> {
                           'assets/check.png',
                           width: 18,
                           height: 18,
-                        )
+                        ),
+                  Column(
+                    children: [
+                      Text(
+                        title,
+                      )
+                    ],
+                  ),
                 ],
               ),
             ],
@@ -106,9 +113,9 @@ class _PaymentAppState extends State<PaymentApp> {
           child: Column(
             children: [
               header(),
-              option(0),
-              option(1),
-              option(2),
+              option(0, 'Monthly', 'Good for starting up', '\$20'),
+              option(1, 'Quarterly', 'Focusing on building', '\$55'),
+              option(2, 'Yearly', 'Steady company', '\$220'),
             ],
           ),
         ),

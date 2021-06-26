@@ -118,7 +118,29 @@ class _PaymentAppState extends State<PaymentApp> {
       );
     }
 
-    Widget checkoutButton() {}
+    Widget checkoutButton() {
+      return Column(
+        children: [
+          Container(
+            width: 311,
+            height: 51.23,
+            child: TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Color(0xff007DFF),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(71),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                'Checkout Now',
+                style: buttonTextStyle,
+              ),
+            ),
+          ),
+        ],
+      );
+    }
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

@@ -150,10 +150,13 @@ class _PaymentAppState extends State<PaymentApp> {
           child: Column(
             children: [
               header(),
+              SizedBox(height: 50),
               option(0, 'Monthly', 'Good for starting up', '\$20'),
               option(1, 'Quarterly', 'Focusing on building', '\$55'),
               option(2, 'Yearly', 'Steady company', '\$220'),
-              checkoutButton(),
+              SizedBox(height: 50),
+              selectedIndex == -1 ? SizedBox() : checkoutButton(),
+              SizedBox(height: 50),
             ],
           ),
         ),

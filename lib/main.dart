@@ -15,6 +15,48 @@ class _PaymentAppState extends State<PaymentApp> {
 
   @override
   Widget build(BuildContext context) {
+    Widget header() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          top: 50.0,
+          left: 32,
+          right: 32,
+        ),
+        child: Column(
+          children: [
+            Center(
+              child: Image.asset(
+                'assets/icon_one.png',
+                width: 267,
+                height: 200,
+              ),
+            ),
+            SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Upgrade to',
+                  style: titleTextStyle,
+                ),
+                SizedBox(width: 6),
+                Text(
+                  'Pro',
+                  style: protitleTextStyle,
+                ),
+              ],
+            ),
+            SizedBox(height: 16),
+            Text(
+              'Go unlock all features and \nbuild your own business bigger',
+              style: subtitleTextStyle,
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget option(int index, String title, String subtitle, String pricing) {
       return GestureDetector(
         onTap: () {
@@ -72,48 +114,6 @@ class _PaymentAppState extends State<PaymentApp> {
               ),
             ],
           ),
-        ),
-      );
-    }
-
-    Widget header() {
-      return Padding(
-        padding: const EdgeInsets.only(
-          top: 50.0,
-          left: 32,
-          right: 32,
-        ),
-        child: Column(
-          children: [
-            Center(
-              child: Image.asset(
-                'assets/icon_one.png',
-                width: 267,
-                height: 200,
-              ),
-            ),
-            SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Upgrade to',
-                  style: titleTextStyle,
-                ),
-                SizedBox(width: 6),
-                Text(
-                  'Pro',
-                  style: protitleTextStyle,
-                ),
-              ],
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Go unlock all features and \nbuild your own business bigger',
-              style: subtitleTextStyle,
-              textAlign: TextAlign.center,
-            ),
-          ],
         ),
       );
     }

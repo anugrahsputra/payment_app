@@ -24,7 +24,7 @@ class _PaymentAppState extends State<PaymentApp> {
         },
         child: Container(
           padding: EdgeInsets.all(20),
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.all(12),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             border: Border.all(
@@ -36,6 +36,7 @@ class _PaymentAppState extends State<PaymentApp> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   selectedIndex == index
                       ? Image.asset(
@@ -48,12 +49,24 @@ class _PaymentAppState extends State<PaymentApp> {
                           width: 18,
                           height: 18,
                         ),
+                  // SizedBox(width: 16),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         title,
-                      )
+                        style: planTextStyle,
+                      ),
+                      Text(
+                        subtitle,
+                        style: descTextStyle,
+                      ),
                     ],
+                  ),
+                  SizedBox(width: 91),
+                  Text(
+                    pricing,
+                    style: priceTextStyle,
                   ),
                 ],
               ),

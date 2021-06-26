@@ -24,7 +24,7 @@ class _PaymentAppState extends State<PaymentApp> {
         },
         child: Container(
           padding: EdgeInsets.all(20),
-          margin: EdgeInsets.all(13),
+          margin: EdgeInsets.all(12),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             border: Border.all(

@@ -118,6 +118,8 @@ class _PaymentAppState extends State<PaymentApp> {
       );
     }
 
+    Widget checkoutButton() {}
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -129,6 +131,7 @@ class _PaymentAppState extends State<PaymentApp> {
               option(0, 'Monthly', 'Good for starting up', '\$20'),
               option(1, 'Quarterly', 'Focusing on building', '\$55'),
               option(2, 'Yearly', 'Steady company', '\$220'),
+              checkoutButton(),
             ],
           ),
         ),
